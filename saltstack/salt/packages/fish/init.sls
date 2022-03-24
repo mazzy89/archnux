@@ -1,3 +1,3 @@
 fish:
   pkg.installed:
-    - version: {{ salt['pillar.get']('packages.fish:fish:version', '3.3.1-1') }}
+    - version: {{ salt['pillar.get']('fish:version', '3.3.1-1') }}
