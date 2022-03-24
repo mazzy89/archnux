@@ -15,9 +15,7 @@ users:
     sudouser: true
     shell: /usr/bin/fish
     ssh_key_type: rsa
-    # Generates an authorized_keys file for the user
-    # with the given keys
-    ssh_auth_file:
+    ssh_auth_sources:
       - salt://ssh_keys/files/salmazz.pub
 
     # Using gitconfig without Git installed will result in an error
