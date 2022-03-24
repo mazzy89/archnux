@@ -15,18 +15,10 @@ users:
     sudouser: true
     shell: /usr/bin/fish
     ssh_key_type: rsa
-    ssh_keys:
-      # You can inline the private keys ...
-      # privkey: PRIVATEKEY
-      # pubkey: PUBLICKEY
-      # or you can provide path to key on Salt fileserver
-      pubkey: salt://ssh/salmazz/salmazz.pub
-    ssh_auth:
-      - salmazz
     # Generates an authorized_keys file for the user
     # with the given keys
     ssh_auth_file:
-      - salmazz
+      - salt://ssh_keys/files/salmazz.pub
 
     # Using gitconfig without Git installed will result in an error
     # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html:
