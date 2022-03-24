@@ -3,6 +3,7 @@
 ---
 exclude_paths: []
 rules: {}
-skip_list: []
+skip_list:
+  - 204
 tags: []
 verbosity: 1
