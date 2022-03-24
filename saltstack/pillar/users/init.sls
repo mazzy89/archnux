@@ -20,7 +20,7 @@ users:
       # privkey: PRIVATEKEY
       # pubkey: PUBLICKEY
       # or you can provide path to key on Salt fileserver
-      pubkey: salt://ssh/salmazz.pub
+      pubkey: salt://ssh/salmazz/salmazz.pub
     ssh_auth:
       - salmazz
     # Generates an authorized_keys file for the user
