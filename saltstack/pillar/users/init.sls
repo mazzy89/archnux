@@ -8,9 +8,6 @@ users:
     password: '$5$hCj7tn95sxWJMl7K$L.gdcTt7tSfb3pn.4U/LGnSSoT9nh9W6OvKrOKl/Qi1'
     enforce_password: true
     createhome: true
-    # Disables user management except sudo rules.
-    # Useful for setting sudo rules for system accounts created by package instalation
-    sudoonly: false
     sudouser: true
     shell: /usr/bin/fish
     ssh_key_type: rsa
