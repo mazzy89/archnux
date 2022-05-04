@@ -1,2 +1,2 @@
 fish:
-  version: 3.3.1-1
+  version: 3.4.1-1
