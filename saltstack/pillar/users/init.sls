@@ -5,7 +5,7 @@ users:
   ## Full list of pillar values
   salmazz:
     fullname: Salvatore Mazzarino
-    password: '$1$OHigRS8l$94TYoW8IYl5.Zw/zmEl8H'
+    password: '$5$OAv/MQdCf2T8Htcv$3MU3bi666T5.YYPjeBcNZDLG4BszVTOFCWGra.P3bh6'
     enforce_password: true
     hash_password: true
     createhome: true
@@ -19,6 +19,7 @@ users:
       - salt://ssh_keys/files/salmazz.pub
     groups:
       - sudo
+      - wheel
 
     # Using gitconfig without Git installed will result in an error
     # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html:
