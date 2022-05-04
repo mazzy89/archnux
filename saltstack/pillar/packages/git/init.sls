@@ -1,2 +1,2 @@
 git:
-  version: 2.35.1-1
+  version: 2.36.0-1
