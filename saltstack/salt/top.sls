@@ -6,4 +6,4 @@ base:
     # Local States
     - packages.fish
     - packages.git
-    - packages.rustup
+    - packages.rust
