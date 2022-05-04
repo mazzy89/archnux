@@ -1,0 +1,4 @@
+---
+username: kitchen
+ssh_key: "/Users/macminix86server/git/archnux/.kitchen/docker_id_rsa"
+last_error: Kitchen::ShellOut::ShellCommandFailed

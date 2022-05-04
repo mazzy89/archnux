@@ -1,0 +1,128 @@
+I, [2022-03-24T11:34:20.496551 #68000]  INFO -- default-arch: -----> Cleaning up any prior instances of <default-arch>
+I, [2022-03-24T11:34:20.496857 #68000]  INFO -- default-arch: -----> Destroying <default-arch>...
+I, [2022-03-24T11:34:20.497395 #68000]  INFO -- default-arch: Finished destroying <default-arch> (0m0.00s).
+I, [2022-03-24T11:34:20.497743 #68000]  INFO -- default-arch: -----> Testing <default-arch>
+I, [2022-03-24T11:34:20.497824 #68000]  INFO -- default-arch: -----> Creating <default-arch>...
+E, [2022-03-24T11:34:22.382850 #68000] ERROR -- default-arch: Create failed on instance <default-arch>.
+E, [2022-03-24T11:34:22.383023 #68000] ERROR -- default-arch: ------Exception-------
+E, [2022-03-24T11:34:22.383063 #68000] ERROR -- default-arch: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2022-03-24T11:34:22.383109 #68000] ERROR -- default-arch: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20220324-68000-qpnv90 . ----
+STDOUT: 
+STDERR: #1 [internal] load build definition from Dockerfile-kitchen20220324-68000-qpnv90
+#1 sha256:f5366cf2fd1619387c97fe23c3ac4fad043c4da7ccb44b706333ccebd8084ad8
+#1 transferring dockerfile: 1.61kB done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:f0de330fe0152f2101622e96c2d409f813405482aff90639906f03da7c071693
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/arch:latest
+#3 sha256:2e0ba7d0a9c75741bd2bf61234412b5c962d5179b188f2bf0d2f2dc05fc98346
+#3 ...
+
+#4 [auth] library/arch:pull token for registry-1.docker.io
+#4 sha256:e75e71dba713031bcff113d4078b01f081ddbe5ec3afe09d21c0b6203ac75e21
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/arch:latest
+#3 sha256:2e0ba7d0a9c75741bd2bf61234412b5c962d5179b188f2bf0d2f2dc05fc98346
+#3 ERROR: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+------
+ > [internal] load metadata for docker.io/library/arch:latest:
+------
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+---- End output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20220324-68000-qpnv90 . ----
+Ran docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20220324-68000-qpnv90 . returned 1
+E, [2022-03-24T11:34:22.383141 #68000] ERROR -- default-arch: ----------------------
+E, [2022-03-24T11:34:22.383169 #68000] ERROR -- default-arch: ------Backtrace-------
+E, [2022-03-24T11:34:22.383201 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/cli_helper.rb:53:in `rescue in run_command'
+E, [2022-03-24T11:34:22.383232 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/cli_helper.rb:40:in `run_command'
+E, [2022-03-24T11:34:22.383255 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/cli_helper.rb:36:in `docker_command'
+E, [2022-03-24T11:34:22.383277 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/image_helper.rb:59:in `build_image'
+E, [2022-03-24T11:34:22.383298 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/container/linux.rb:41:in `create'
+E, [2022-03-24T11:34:22.383320 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/driver/docker.rb:124:in `create'
+E, [2022-03-24T11:34:22.383342 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:495:in `public_send'
+E, [2022-03-24T11:34:22.383364 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:495:in `block in perform_action'
+E, [2022-03-24T11:34:22.383386 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2022-03-24T11:34:22.383432 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:524:in `block in action'
+E, [2022-03-24T11:34:22.383456 #68000] ERROR -- default-arch: /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2022-03-24T11:34:22.383478 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:523:in `action'
+E, [2022-03-24T11:34:22.383500 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:495:in `perform_action'
+E, [2022-03-24T11:34:22.383521 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:404:in `create_action'
+E, [2022-03-24T11:34:22.383543 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2022-03-24T11:34:22.383564 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2022-03-24T11:34:22.383585 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2022-03-24T11:34:22.383611 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `each'
+E, [2022-03-24T11:34:22.383633 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2022-03-24T11:34:22.383654 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:161:in `verify'
+E, [2022-03-24T11:34:22.383675 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:190:in `block in test'
+E, [2022-03-24T11:34:22.383697 #68000] ERROR -- default-arch: /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2022-03-24T11:34:22.383721 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:186:in `test'
+E, [2022-03-24T11:34:22.383743 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `public_send'
+E, [2022-03-24T11:34:22.383765 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2022-03-24T11:34:22.383786 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2022-03-24T11:34:22.383807 #68000] ERROR -- default-arch: ----End Backtrace-----
+E, [2022-03-24T11:34:22.383828 #68000] ERROR -- default-arch: ---Nested Exception---
+E, [2022-03-24T11:34:22.383848 #68000] ERROR -- default-arch: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2022-03-24T11:34:22.383869 #68000] ERROR -- default-arch: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20220324-68000-qpnv90 . ----
+STDOUT: 
+STDERR: #1 [internal] load build definition from Dockerfile-kitchen20220324-68000-qpnv90
+#1 sha256:f5366cf2fd1619387c97fe23c3ac4fad043c4da7ccb44b706333ccebd8084ad8
+#1 transferring dockerfile: 1.61kB done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:f0de330fe0152f2101622e96c2d409f813405482aff90639906f03da7c071693
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/arch:latest
+#3 sha256:2e0ba7d0a9c75741bd2bf61234412b5c962d5179b188f2bf0d2f2dc05fc98346
+#3 ...
+
+#4 [auth] library/arch:pull token for registry-1.docker.io
+#4 sha256:e75e71dba713031bcff113d4078b01f081ddbe5ec3afe09d21c0b6203ac75e21
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/arch:latest
+#3 sha256:2e0ba7d0a9c75741bd2bf61234412b5c962d5179b188f2bf0d2f2dc05fc98346
+#3 ERROR: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+------
+ > [internal] load metadata for docker.io/library/arch:latest:
+------
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+---- End output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20220324-68000-qpnv90 . ----
+Ran docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20220324-68000-qpnv90 . returned 1
+E, [2022-03-24T11:34:22.383914 #68000] ERROR -- default-arch: ----------------------
+E, [2022-03-24T11:34:22.383937 #68000] ERROR -- default-arch: ------Backtrace-------
+E, [2022-03-24T11:34:22.383958 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/cli_helper.rb:53:in `rescue in run_command'
+E, [2022-03-24T11:34:22.383979 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/cli_helper.rb:40:in `run_command'
+E, [2022-03-24T11:34:22.384002 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/cli_helper.rb:36:in `docker_command'
+E, [2022-03-24T11:34:22.384029 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/helpers/image_helper.rb:59:in `build_image'
+E, [2022-03-24T11:34:22.384051 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/docker/container/linux.rb:41:in `create'
+E, [2022-03-24T11:34:22.384072 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/kitchen-docker-2.12.0/lib/kitchen/driver/docker.rb:124:in `create'
+E, [2022-03-24T11:34:22.384093 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:495:in `public_send'
+E, [2022-03-24T11:34:22.384121 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:495:in `block in perform_action'
+E, [2022-03-24T11:34:22.384146 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2022-03-24T11:34:22.384172 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:524:in `block in action'
+E, [2022-03-24T11:34:22.384194 #68000] ERROR -- default-arch: /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2022-03-24T11:34:22.384232 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:523:in `action'
+E, [2022-03-24T11:34:22.384258 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:495:in `perform_action'
+E, [2022-03-24T11:34:22.384279 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:404:in `create_action'
+E, [2022-03-24T11:34:22.384300 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2022-03-24T11:34:22.384322 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2022-03-24T11:34:22.384343 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2022-03-24T11:34:22.384364 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `each'
+E, [2022-03-24T11:34:22.384405 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2022-03-24T11:34:22.384420 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:161:in `verify'
+E, [2022-03-24T11:34:22.384448 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:190:in `block in test'
+E, [2022-03-24T11:34:22.384467 #68000] ERROR -- default-arch: /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2022-03-24T11:34:22.384486 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/instance.rb:186:in `test'
+E, [2022-03-24T11:34:22.384501 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `public_send'
+E, [2022-03-24T11:34:22.384517 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2022-03-24T11:34:22.384534 #68000] ERROR -- default-arch: /Library/Ruby/Gems/2.6.0/gems/test-kitchen-3.2.2/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2022-03-24T11:34:22.384552 #68000] ERROR -- default-arch: ----End Backtrace-----
