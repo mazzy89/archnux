@@ -5,9 +5,8 @@ users:
   ## Full list of pillar values
   salmazz:
     fullname: Salvatore Mazzarino
-    password: '$5$OAv/MQdCf2T8Htcv$3MU3bi666T5.YYPjeBcNZDLG4BszVTOFCWGra.P3bh6'
+    password: '$5$hCj7tn95sxWJMl7K$L.gdcTt7tSfb3pn.4U/LGnSSoT9nh9W6OvKrOKl/Qi1'
     enforce_password: true
-    hash_password: true
     createhome: true
     # Disables user management except sudo rules.
     # Useful for setting sudo rules for system accounts created by package instalation
