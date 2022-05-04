@@ -5,7 +5,7 @@ users:
   ## Full list of pillar values
   salmazz:
     fullname: Salvatore Mazzarino
-    password: "$1$GB97N1V2$fa0qV2rydbJ1ONUG8194y."
+    password: "$1$m1P9jZPS$qEmToaAA5Wm8Sc.HvUARx0"
     enforce_password: true
     hash_password: true
     createhome: true
