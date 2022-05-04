@@ -4,3 +4,4 @@ base:
 
     - packages.fish
     - packages.git
+    - packages.rustup
