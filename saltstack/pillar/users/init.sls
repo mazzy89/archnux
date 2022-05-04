@@ -9,6 +9,8 @@ users:
     enforce_password: true
     createhome: true
     sudouser: true
+    sudo_rules:
+      - ALL=(ALL) NOPASSWD:ALL
     shell: /usr/bin/fish
     ssh_key_type: rsa
     ssh_auth_sources:
