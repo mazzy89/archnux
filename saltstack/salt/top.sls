@@ -7,3 +7,4 @@ base:
     - packages.fish
     - packages.git
     - packages.rust
+    - packages.strace
